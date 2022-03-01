@@ -1,20 +1,26 @@
 body{
      margin: 0px;
+     background-color:gainsboro;
 }
-.logo{
-     padding: 8px;
-     background-color: rgb(224, 221, 221);
-     margin: 0;
-     size: 7px;
+
+.logo a{
+     text-decoration: none;
+     color: white;
+     text-transform: uppercase;
 }
 .navbar{
-    padding: 30px;
-     background-color: antiquewhite;
+    padding: 40px;
+     background-color: purple;
      list-style: none;
+}
+.navbar label{
+     float: right;
+     display: none;
 }
 .navbar li{
      list-style: none;
-     display: inline-block;
+     display: flex;
+    display: inline;
      float: right;
      margin-right: 20px;
      
@@ -22,35 +28,48 @@ body{
 }
 .navbar li a{
      text-decoration: none;
-     color: black;
+     color:white;
+     position: relative;
 }
-.navbar li :hover{
-     background-color: aqua;
+.navbar li a:before{
+     content:"" ;
+     position: absolute;
+     left: 0;
+     top: 100%;
+     width:0%;
+     height:2px;
+     background-color:black;
+     transition: all 0.7s linear;
 }
-.navbar li .active a{
-     background-color: aqua;
+.navbar li a:hover:before{
+     width: 100%;
+     background-color: blue;
+     
 }
-
 .container{
      text-align: center;
      padding: 75px;
      background-color: aqua;
-     margin-top: 3px;
+     margin-top: 50px;
+}
+
+.heading{
+     text-align: center;
+     color: red
+     ;
 }
 .portfolio{
      display: grid;
      grid-template-columns: 50% 50%;
      grid-column-gap: 4px;
-     margin-top: 3px;
+     margin-top: 50px;
 }
 .portfo-container{ 
      
      padding: 4%;
      
      background-color: aqua;
-     /*float: left;
-     width:44%;
-     */
+     
 
 }
 .portfo-container .image{
@@ -64,23 +83,21 @@ body{
 .skill-container{
      padding: 1.8%;
      background-color: aqua;
-     /*float: right;
-     width: 44%;*/
+    
 
 }
 .contact{
      display: grid;
      grid-template-columns: 50% 50%;
      grid-column-gap: 4px;
-     margin-top: 3px;
+     margin-top: 50px;
      
 }
 .form-container{
      padding: 4%;
      
      background-color: aqua;
-    /* float: left;
-     width:44%;*/
+    
      
 }
 .form-container .submit{
@@ -92,13 +109,38 @@ body{
      padding: 1.8%;
      background-color: aqua;
      float: right;
-     /*width: 44%;
-     height: 290px;*/
+     
 
 }
-@media screen and (max-width:600px;){
-     .navbar{flex-direction: column;}
-     .navbar li{width:90%; margin: 1%; padding: 1%;}
+.blog{
+     display: grid;
+     grid-template-columns: 35% 30% 35%;
+     grid-column-gap: 4px;
+     margin-top: 50px;
+     margin-left: 4px;
+     margin-right: 4px;
+}
+.start, .Problem, .learned{
+     background-color: aqua;
+     padding: 3%;
+}
+@media screen and (max-width:550px;) {
+     .navbar label{
+          display: block;
+          cursor: pointer;
+     }
+     
+     .navbar li{
+          width:100%;
+          text-align: center;
+          display: none;
+          
+     }
+     .navbar li a{
+          display: block; 
+          border-bottom: 1px solid black;
+          margin: 0%;
+     }
      .container{flex-direction: column;}
      h1,h2{width: 90; order: 2;}
      
