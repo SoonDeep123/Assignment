@@ -1,26 +1,30 @@
-body{
+body {
      margin: 0px;
-    
-     background-color:gainsboro;
+    background-color:gainsboro;
 }
 .navbar{
      background-color: purple;
      padding: 30px;
+     overflow: hidden;
      
 }
 
 .navbar li{
      float: right;
      list-style: none;
+     
+}
+.navbar li{
+     margin-right: 30px;
 }
 .navbar li a{
      text-decoration: none;
-     margin-right: 20px;
+     
      color: white;
-     padding-right: 20px;
+     
      text-align: center;
 }
-.navbar li:hover{
+.navbar li a:hover{
 background-color: black;
 }
 .logo a{
@@ -40,15 +44,16 @@ label{
 /*
 responsive for navbar
 */
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 550px){
      label{
           display: block;
           cursor: pointer;
    }
     .navbar li{
          text-align: right;
-        width: 100%;
+         width: 100%;
          display:none;
+        
     }
     .navbar li a{
          display: block;
@@ -56,6 +61,8 @@ responsive for navbar
     }
     #toggle:checked + ul li{
          display: block;
+        margin-top: 10px;
+        padding: 0 50px 0 0;
     }
 }
 .container{
@@ -64,11 +71,26 @@ responsive for navbar
      background-color: aqua;
      margin-top: 50px;
 }
-
+/* annimation for all heading*/
 .heading{
+     background-color: black;
      margin-top: 3px;
      text-align: center;
      color: red;
+     width: 200px;
+     margin-left: 43%;
+     position: relative;
+     animation-name: rotate;
+     animation-duration: 1s;
+     animation-iteration-count: 1 ;
+}
+@keyframes rotate {
+     from {
+          margin-left: 100%;
+     }
+     to {
+          margin-right: 100%;
+     }
 }
 .portfolio{
      display: grid;
@@ -81,9 +103,13 @@ responsive for navbar
      padding: 4%;
      background-color: aqua;
 }
+
 .skill-container{
      padding: 4%;
      background-color: aqua;
+}
+.info{
+     margin-top: 130px;
 }
 
 .portfo-container .image{
@@ -94,6 +120,7 @@ responsive for navbar
      margin-left: 30px;
      
 }
+
 .contact{
      display: grid;
      grid-template-columns: 50% 50%;
@@ -131,4 +158,21 @@ responsive for navbar
 .start, .Problem, .learned{
      background-color: aqua;
      padding: 3%;
+}
+.report{
+     margin-top: 50px;
+     background-color: aqua;
+     padding: 50px;}
+.validate-image{
+     padding: 20px;
+     
+}
+.image{
+     float: left;
+     background-color:skyblue;
+}
+.validate-image img{
+     width: 400px;
+     height: 250px;
+    margin: 7px;
 }
